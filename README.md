@@ -2,9 +2,8 @@
 
 Valyrio is both a variable- and a stack-based language. Each program is prefixed with a letter that determines the mode and the symbol ` ∫ ` to tell the program it is the tag
 
-There are 5 different modes in Valyrio
+There are 4 different modes in Valyrio
 
-    c   Code-Golf:  Designed specifically for code-golf; each builtin is equal to 1 byte
     d   Debugging:  Rather than running the code, it finds any errors and prints them
     e   Executing:  Runs the code while ignoring any errors
     f   Full mode:  Runs the code, then outputs any errors found
@@ -33,8 +32,7 @@ There are two different ways of doing comments that depend on the mode
 
 ###Hello, World!
 
-    s ∫ main [´Ø] ‹ Stack Mode ›    Byte count below
-    1 2 [ 3  ]456                   6 bytes
+    s ∫ main [´Ø] ‹ Stack Mode › 
     
     e ∫ main [
     urnep("Hello, World!")  ==> Prints the string "Hello, World!"
@@ -44,16 +42,11 @@ There are two different ways of doing comments that depend on the mode
 
     s ∫ main [Ïpo] ‹ Ï takes an integer input, p pushes its primality to the stack and o outputs the first item in the stack ›
     
-    Byte count
-    
-    s ∫ main [Ïpo]      
-    1 2 [ 3  ]4567      7 Bytes
-    
 ###Quine
 
 This is the shortest quine in stack mode
 
-    s ∫ main [§] 5 bytes
+    s ∫ main [§]
     
 ###FizzBuzz
 
