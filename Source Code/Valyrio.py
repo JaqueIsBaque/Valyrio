@@ -1,5 +1,5 @@
 import sys
-import interpreter_v1
+import Version_1_3
 
 '''
 Usage
@@ -18,7 +18,7 @@ def parse_cmd_line():
     mode = args[0]
 
     if mode == '1':
-        interpreter = interpreter_v1
+        interpreter = Version_1_3
     else:
         return 'E'
 
