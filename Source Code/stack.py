@@ -332,10 +332,7 @@ def Clear():
 
 def Copy():
     stack.push(*stack.copy())
-
-def Quine():
-    print('s ∫ main [§]')
-
+    
 def Credits():
     print('''Credits Not Done''')
 
