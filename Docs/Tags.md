@@ -1,27 +1,4 @@
 
-### Code Golf Tag ###
-
-Each command used uses a single byte.
-
-E.g.
-
-    c ∫ main [
-    urnep("h")
-    ]
-
-Uses 8 bytes
-
-    c           Takes one byte
-    ∫           Takes one byte
-    main [      Takes one byte
-    \n          Takes one byte
-    urnep("h")  Takes two bytes: urnep() and "h"
-    \n          Takes one byte
-    ]           Takes one byte
-
-
-================================================================================
-
 ### Debug Mode Tag ###
 
 Rather than run the code, it tests it for errors
