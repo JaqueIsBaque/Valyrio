@@ -766,8 +766,8 @@ tags = ['c',    # code-golf mode
 
 def Main(text):
         
-    tag = text.split('∫')[0].strip()
-    text = text.split('∫')[1].strip()
+    tag = text.split(' ∫ ')[0].strip()
+    text = text.split(' ∫ ')[1].strip()
 
     if tag == 's':
         return MainStack(text)
@@ -783,9 +783,6 @@ class MainStack:
             raise SyntaxError('Invalid character: "\n"')
 
         self.text = text.split('main [')[1][:-1]
-
-    def __len__(self):
-        return 4+len(self.text)
 
     def run(self,default=None):
         
@@ -882,7 +879,7 @@ class MainStack:
         return parsed
     
     def quine(self):
-        print(self.text)
+        print('s ∫ main ['+self.text+']')
 
     @staticmethod
     def atIndex(text,char):
