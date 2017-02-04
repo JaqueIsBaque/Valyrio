@@ -102,5 +102,7 @@ E.g.
 outputs "Hello, World!"
 
 `´` pushes "Hello, World!" to the stack
+
 `Ø` ouputs the whole stack as ascii letters
+
 `]` ends code block
