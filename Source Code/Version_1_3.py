@@ -728,7 +728,6 @@ STACKCOMMANDS = {
 
     # Others
     
-    '§':stack.Quine,
     '©':stack.Credits,
     'q':quit,
     'Q':quit,
@@ -796,14 +795,20 @@ class MainStack:
         self.compiled = self.tokenize()
         
         for char in self.compiled:
+            if char == '§':
+                quine = True
             if isinstance(char,int):
                 stack.stack.push(char)
             else:
                 if len(char) != 1:
                     char = char[1:-1]
                     stack.stack.push(*char)
+                elif char == '§':
+                    pass
                 else:
                     STACKCOMMANDS[char]()
+        if quine:
+            self.quine()
 
     def tokenize(self):
         
@@ -875,6 +880,9 @@ class MainStack:
                 pass
         
         return parsed
+    
+    def quine(self):
+        print(self.text)
 
     @staticmethod
     def atIndex(text,char):
