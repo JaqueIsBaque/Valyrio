@@ -1,4 +1,4 @@
-mport sys              #For stdout, -in and -err
+import sys              #For stdout, -in and -err
 import string as chars  #Change to chars so that var name string can be used
 import math             #For global constants
 import stack            #For stack mode
@@ -674,7 +674,7 @@ STACKCOMMANDS = {
     '~':stack.Negative,
     'S':stack.SumRange,
     'l':stack.Log,
-    'T':stack.LogTen,
+    't':stack.LogTen,
 
     '∑':stack.Sum,
     'R':stack.Range,
@@ -686,11 +686,11 @@ STACKCOMMANDS = {
     # Base Convertions
 
     'u':stack.Unary,
-    'B':stack.Binary,
+    'b':stack.Binary,
     't':stack.Tenary,
     'å':stack.Oct,
     'h':stack.Hex,
-    'b':stack.Base,
+    'B':stack.Base,
 
     # Number Commands
     
@@ -699,6 +699,13 @@ STACKCOMMANDS = {
     '∞':stack.Infinite,
     'e':stack.PushE,
     'F':stack.FizzBuzz,
+    
+    'X':stack.Push10,
+    'L':stack.Push50,
+    'C':stack.Push100,
+    'D':stack.Push500,
+    'T':stack.PushThou,
+    'Ω':stack.PushMill,
 
     # String Commands
     
@@ -711,12 +718,13 @@ STACKCOMMANDS = {
     '«':stack.PopTop,
     '…':stack.ConvertAscii,
     'Z':stack.Reverse,
-    'L':stack.Length,
+    '–':stack.Length,
     's':stack.Sort,
-    'X':stack.Set,
+    'J':stack.Set,
     'm':stack.Min,
     'M':stack.Max,
     'c':stack.Clear,
+    'y':stack.Copy,
 
     # Others
     
