@@ -758,8 +758,7 @@ STACKCOMMANDS = {
     'Æ':stack.InOut.OutputInput,
 }
 
-tags = ['c',    # code-golf mode
-        'd',    # debug mode
+tags = ['d',    # debug mode
         'e',    # execute code
         'f',    # full mode
         's',    # stack mode
@@ -767,8 +766,8 @@ tags = ['c',    # code-golf mode
 
 def Main(text):
         
-    tag = text.split(' ∫ ')[0].strip()
-    text = text.split(' ∫ ')[1].strip()
+    tag = text.split('∫')[0].strip()
+    text = text.split('∫')[1].strip()
 
     if tag == 's':
         return MainStack(text)
@@ -787,14 +786,14 @@ class MainStack:
 
     def run(self,default=None):
         
+        quine = False
+        
         if default is not None:
             stack.stack.push(default)
 
         self.compiled = self.tokenize()
         
         for char in self.compiled:
-            if char == '§':
-                quine = True
             if isinstance(char,int):
                 stack.stack.push(char)
             else:
@@ -802,7 +801,7 @@ class MainStack:
                     char = char[1:-1]
                     stack.stack.push(*char)
                 elif char == '§':
-                    pass
+                    quine = True
                 else:
                     STACKCOMMANDS[char]()
         if quine:
