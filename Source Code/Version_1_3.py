@@ -11,7 +11,7 @@ __version__ = '1.3'                                     #Version: 1.3
 
 ''' Define types that cannot be called'''
 
-class _Qurdon:
+class _Qurdon: #Define the class containing the list methods
 
     def __init__(self):
         self.list = list()
@@ -68,7 +68,7 @@ class _Qurdon:
     def qog(self,reverse=False): #sort
         self.list = sorted(self.list,reverse=reverse)
 
-class _Udra:
+class _Udra: #Define the class containing the string methods
 
     def __init__(self):
         self.str = ''
@@ -250,12 +250,12 @@ class _Udra:
 
 ''' Int types '''
 
-class Int:
+class Int: #Class for integers, contains no methods
     
     def __init__(self,x):
         self.x = int(x)
         
-    def __add__(self,y):
+    def __add__(self,y): #Math operands automatically change the value e.g x := 5 ; x + 6 ; x = 11
         self.x += y
         
     def __sub__(self,y):
@@ -264,7 +264,7 @@ class Int:
     def __mul__(self,y):
         self.x *= y
         
-    def __truediv__(self,y):
+    def __truediv__(self,y): #Valyrio doesn't handle floats
         self.x //= y
         
     def __mod__(self,y):
@@ -273,19 +273,19 @@ class Int:
     def __repr__(self):
         return str(self.x)
     
-    def __iter__(self):
+    def __iter__(self): #Ints are iterable, returning the range 1,x+1
         for i in range(self.x):
-            yield i
+            yield i+1
             
     def __abs__(self):
         return self.x if self.x >= 0 else -self.x
     
-    def __len__(self):
+    def __len__(self): #Ints have a length, equivilent to the number of digits in the number 
         length = 0
         for i in str(self.x):
             length += 1
         return length
-            
+        
 class Hex(Int):
     
     def __init__(self,x,main=hex):
@@ -710,6 +710,7 @@ STACKCOMMANDS = {
     # String Commands
     
     '´':stack.HelloWorld,
+    'ß':stack.ScoreLang,
 
     # Stack Commands
     
