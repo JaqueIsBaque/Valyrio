@@ -94,6 +94,8 @@ The `all` command is still applicable for these commands
 
 `´` pushes `"Hello, World!"` to the stack
 
+`ß` pushes the total of the `ord` value of `Valyrio`
+
 ##Stack Commands
 
 `»` duplicates the top of the stack
