@@ -379,8 +379,8 @@ class InOut:
     def InInt():
         stack.push(int(input()))
 
-    def InNoSpace():
-        stack.push(''.join(input().split()))
+    def InEval():
+        stack.push(eval(input()))
 
     def Err():
         print('Exited with status 1',file=sys.stderr)
