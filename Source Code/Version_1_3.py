@@ -750,7 +750,7 @@ STACKCOMMANDS = {
     'Í':stack.InOut.InLower,
     'Î':stack.InOut.InUpper,
     'Ï':stack.InOut.InInt,
-    'i':stack.InOut.InNoSpace,
+    'i':stack.InOut.InEval,
 
     'w':stack.InOut.Err,
     'W':stack.InOut.RandomErr,
