@@ -146,6 +146,8 @@ The `all` command is still applicable for these commands
 
 `Ï` takes input, converts to an integer and pushes to stack
 
+`i` takes input, evaluates it and pushes result to the stack
+
 `w` outputs an error
 
 `W` outputs a random error taken from a list of preset errors
