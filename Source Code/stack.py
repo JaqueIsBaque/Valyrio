@@ -283,6 +283,12 @@ def PushMill():
 
 def HelloWorld():
     stack.push("Hello, World!")
+    
+def Score():
+    num = 0
+    for i in 'Valyrio':
+        num += ord(i)
+    stack.push(num)
 
 ''' Stack Commands '''
 
