@@ -148,14 +148,7 @@ def Product():
 
 def IsPrime():
     x = stack[0]
-    if x in [0,1]:
-        var = True
-    for i in range(2,x):
-        if x % i == 0:
-            var = True
-    else:
-        var = False
-    stack.push(var)
+    stack.push(_IsPrime(x))
 
 def _IsPrime(x):
     if x in [0,1]:
