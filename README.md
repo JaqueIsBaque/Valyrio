@@ -53,5 +53,9 @@ This is the shortest quine in stack mode
     s ∫ main [ÏF]
     
 This takes an integer input and outputs that many iterations of FizzBuzz
-    
 
+OR
+
+    s ∫ main [iF]
+    
+Takes an input, evaluates it and outputs FizzBuzz up to that number
